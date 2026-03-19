@@ -13,7 +13,6 @@ function Calibragem() {
 
     return (
         <div>
-            <h3>---------------------</h3>
             <h2>calculo</h2>
             pressao Desejada <input
                 type="number"
@@ -29,7 +28,6 @@ function Calibragem() {
             <br />
             <button onClick={calcularDiferença}>Calibragem</button>
             {resultado}
-            <h3>---------------------</h3>
         </div>
     )
 }

@@ -1,0 +1,35 @@
+
+
+.cont-app{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cont-header{
+  background-color: #8C6954; 
+  /* Define a altura como 100 píxels */
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cont-main{
+  background-color: #F2CEAE; 
+  flex: 1;
+  display: flex;
+}
+
+
+.botoes-nav{
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ff000000
+}
+
+.botoes-nav:hover{
+  background-color: #40352C;
+}

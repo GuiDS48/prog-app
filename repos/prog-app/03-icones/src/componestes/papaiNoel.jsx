@@ -1,33 +1,28 @@
 import { useState } from 'react'
 
-function PapaiNoel() {
-    const [falaPapaiNoel, setfalaPapaiNoel] = useState("")
-    const [result, setResult] = useState("")
-
-    function calculoHoHoHo() {
-        let quantidade = Number(falaPapaiNoel)
-        let texto = ""
-
-        for (let x = 0; x < quantidade; x++) {
-            texto += "Ho "
+function Noel() {
+    const [inputNum, setInputNum] = useState('')
+    const [frase, setFrase] = useState('')
+    function gerarFrase() {
+        let texto = 'Ho '
+        let n = Number(inputNum)
+        for (let i = 1; i < n; i++) {
+            texto += 'ho '
         }
-        texto += "!"
-        
-        setResult(texto)
+        setFrase(texto)
     }
-
     return (
         <div>
-            <input
-                type="number"
-                value={falaPapaiNoel}
-                onChange={(e) => setfalaPapaiNoel(e.target.value)}
+            <h2>Papai Noel</h2>
+            Número de hos:
+            <input type="text"
+                value={inputNum}
+                onChange={(e) => setInputNum(e.target.value)}
             />
-            <button onClick={calculoHoHoHo}>Mostra ho ho</button>
-
-            <p>{result}</p>
+            <button onClick={gerarFrase}>Gerar</button>
+            {frase}
         </div>
     )
 }
 
-export default PapaiNoel
+export default Noel
